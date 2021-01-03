@@ -16,7 +16,7 @@ class WebMap extends React.Component {
 
       const trafficLayer = new MapImageLayer({
         url: "https://utility.arcgis.com/usrsvcs/appservices/XpzFIG0fm0IcDmE2/rest/services/World/Traffic/MapServer",
-        // url: "http://traffic.arcgis.com/arcgis/rest/services/World/Traffic/MapServer",
+        //url: "http://traffic.arcgis.com/arcgis/rest/services/World/Traffic/MapServer",
         dpi: 48,
         imageFormat: "png32",
         refreshInterval: 5, 
@@ -45,15 +45,17 @@ class WebMap extends React.Component {
             type: "map-layer",
             mapLayerId: 4,
           }
-        },{
-          title: "Live Traffic",
-          id: 2,
-          opacity: 0.75,
-          source: {
-            type: "map-layer",
-            mapLayerId: 6,
-          }
-        },{
+        },
+        // {
+        //   title: "Live Traffic",
+        //   id: 2,
+        //   opacity: 0.75,
+        //   source: {
+        //     type: "map-layer",
+        //     mapLayerId: 6,
+        //   }
+        // },
+        {
           title: "Traffic",
           id: 4,
           opacity: 0.75,
@@ -103,8 +105,8 @@ class WebMap extends React.Component {
       this.view.ui.add(legendExpand,"top-left");
 
       const date_today = new Date();
-      const date_yesterday = new Date();
-      date_yesterday.setDate(date_today.getDate()-1);
+      const date_yesterday = new Date(date_today);
+      date_yesterday.setDate(date_yesterday.getDate()-1);
 
       const timeSlider = new TimeSlider({
         container: this.sliderRef.current,

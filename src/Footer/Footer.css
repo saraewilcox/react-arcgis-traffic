@@ -6,16 +6,14 @@
 }
 
 .bottom-container {
-    background-color: #353a41;
+    background-color: #434952;
     position:absolute;
     left:0;
     bottom:0;
     right:0;
     margin-bottom: 0px;
-    margin-top: auto;
     width: 100%;
     height: 3rem;
-    margin-right: 0px;
 }
 
 .row {

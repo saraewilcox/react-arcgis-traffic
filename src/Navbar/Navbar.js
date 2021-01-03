@@ -33,6 +33,9 @@ class NavBar extends Component {
             <DropdownItem href="https://developers.arcgis.com/javascript/">
               Javascript API for ArcGIS
             </DropdownItem>
+            <DropdownItem href="http://140.207.158.228/latest/guide/react/">
+              Javascript API for ArcGIS with React
+            </DropdownItem>
           </DropdownMenu>
           <p className="navbar-text">This application uses the World Traffic Service API from Esri. The traffic data is updated every five minutes.</p>
         </UncontrolledDropdown>
