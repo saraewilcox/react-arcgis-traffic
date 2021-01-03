@@ -143,6 +143,7 @@ class WebMap extends React.Component {
   componentWillUnmount() {
     if (this.view) {
       this.view.container = null;
+      delete this.view;
     }
   }
 
