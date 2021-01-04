@@ -9,10 +9,15 @@
 .navbar-text{
   color: #fff;
   font-size: 1rem;
-  padding-left: 40px;
+  margin-left: 20px;
 }
 
 .navbar-logo {
   color: #fff;
   font-size: 2rem;
+}
+.dropdown-toggle {
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 10px;
 }

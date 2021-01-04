@@ -21,15 +21,8 @@ class WebMap extends React.Component {
         imageFormat: "png32",
         refreshInterval: 5, 
         useViewTime: true,
-        sublayers: [{
-          title: "Traffic Incidents Overview",
-          id: 0,
-          opacity: 0.75,
-          source: {
-            type: "map-layer",
-            mapLayerId: 2,
-          }
-        },{
+        sublayers: [
+        {
           title: "Traffic Incidents Intermediate",
           id: 1,
           opacity: 0.75,
@@ -37,25 +30,15 @@ class WebMap extends React.Component {
             type: "map-layer",
             mapLayerId: 3,
           }
-        },{
-          title: "Traffic Incidents Detailed",
-          id: 2,
+         },{
+          title: "Live Traffic",
+          id: 1,
           opacity: 0.75,
           source: {
             type: "map-layer",
-            mapLayerId: 4,
+            mapLayerId: 6,
           }
-        },
-        // {
-        //   title: "Live Traffic",
-        //   id: 2,
-        //   opacity: 0.75,
-        //   source: {
-        //     type: "map-layer",
-        //     mapLayerId: 6,
-        //   }
-        // },
-        {
+         },{
           title: "Traffic",
           id: 4,
           opacity: 0.75,
@@ -106,7 +89,7 @@ class WebMap extends React.Component {
 
       const date_today = new Date();
       const date_yesterday = new Date(date_today);
-      date_yesterday.setDate(date_yesterday.getDate()-7);
+      date_yesterday.setDate(date_yesterday.getDate()-1);
 
       const timeSlider = new TimeSlider({
         view: this.view,
@@ -132,7 +115,7 @@ class WebMap extends React.Component {
         timeSlider.fullTimeExtent = fullTimeExtent;
         timeSlider.stops = {
           interval:{
-            value: 30,
+            value: 15,
             unit: "minutes"
           }
         }

@@ -20,10 +20,10 @@ class NavBar extends Component {
       <NavbarBrand>
       <h3 className="navbar-logo"> <i class="fas fa-car"></i> <a href={'/'} style={{textDecoration:"none", color:"white"}}>Wichita Traffic App</a> </h3>
       </NavbarBrand>
-      <NavbarToggler onClick={this.toggle}/>
+      <NavbarToggler className="navbar-nav mx-auto align-items-center" onClick={this.toggle}/>
       <Collapse isOpen={this.state.isOpen} navbar>
         <UncontrolledDropdown>
-          <DropdownToggle caret outline color="primary">
+          <DropdownToggle className="dropdown-toggle"caret outline color="primary">
              Documentation
           </DropdownToggle>
           <DropdownMenu right>
