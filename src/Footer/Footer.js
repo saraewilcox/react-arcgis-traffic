@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
 
-const Footnote = (props) => {
+const Footer = (props) => {
     return (
     <div className="main-footer">
         <div className="bottom-container">
@@ -23,4 +23,4 @@ const Footnote = (props) => {
     </div>)
 }
 
- export default Footnote;
+ export default Footer;

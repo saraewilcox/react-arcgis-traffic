@@ -10,13 +10,13 @@ class WebMap extends React.Component {
   }
 
   componentDidMount() {
-    loadModules(['esri/Map', 'esri/layers/MapImageLayer','esri/views/MapView',"esri/widgets/Legend", "esri/widgets/ScaleBar","esri/widgets/TimeSlider","esri/widgets/Expand","esri/TimeExtent", "esri/widgets/LayerList"], { css: true })
-    .then(([ArcGISMap, MapImageLayer, MapView, Legend, Scalebar,TimeSlider,Expand,TimeExtent,LayerList
+    loadModules(["esri/Map", "esri/layers/MapImageLayer", "esri/widgets/ScaleBar","esri/widgets/TimeSlider", "esri/views/MapView","esri/widgets/Legend", "esri/widgets/Expand","esri/TimeExtent", "esri/widgets/LayerList"], { css: true })
+    .then(([ArcGISMap, MapImageLayer, Scalebar, TimeSlider, MapView, Legend, Expand, TimeExtent, LayerList
     ]) => {
 
       const trafficLayer = new MapImageLayer({
-        url: "https://utility.arcgis.com/usrsvcs/appservices/XpzFIG0fm0IcDmE2/rest/services/World/Traffic/MapServer",
-        //url: "http://traffic.arcgis.com/arcgis/rest/services/World/Traffic/MapServer",
+        //url: "https://utility.arcgis.com/usrsvcs/appservices/XpzFIG0fm0IcDmE2/rest/services/World/Traffic/MapServer",
+        url: "http://traffic.arcgis.com/arcgis/rest/services/World/Traffic/MapServer",
         dpi: 48,
         imageFormat: "png32",
         refreshInterval: 5, 
@@ -94,23 +94,23 @@ class WebMap extends React.Component {
       })
       this.view.ui.add(scaleBar,"bottom-left");
 
-      const legendExpand = new Expand({
+      const expandLegend = new Expand({
+        view: this.view,
         expandIconClass: "esri-icon-layers",
         expandTooltip: "Legend",
-        view: this.view,
         content: legend,
-        mode: "floating",
         expanded: false,
+        mode: "floating",
       });
-      this.view.ui.add(legendExpand,"top-left");
+      this.view.ui.add(expandLegend,"top-left");
 
       const date_today = new Date();
       const date_yesterday = new Date(date_today);
-      date_yesterday.setDate(date_yesterday.getDate()-1);
+      date_yesterday.setDate(date_yesterday.getDate()-7);
 
       const timeSlider = new TimeSlider({
-        container: this.sliderRef.current,
         view: this.view,
+        container: this.sliderRef.current,
         values: [
           date_today
         ],
@@ -132,7 +132,7 @@ class WebMap extends React.Component {
         timeSlider.fullTimeExtent = fullTimeExtent;
         timeSlider.stops = {
           interval:{
-            value: 15,
+            value: 30,
             unit: "minutes"
           }
         }
