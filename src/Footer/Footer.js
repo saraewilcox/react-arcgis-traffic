@@ -12,7 +12,7 @@ const Footer = (props) => {
                 </div>
             {/* column2 */}
                 <div className="col">
-                    <a href="https://github.com/saraewilcox/react-arcgis-traffic">This web map's code on github</a>
+                    <a href="https://github.com/saraewilcox/react-arcgis-traffic">View code on github</a>
                 </div>
             {/* column3 */}
                 {/* <div className="col">
