@@ -75,7 +75,7 @@ class WebMap extends React.Component {
         view: this.view,
         scalebarUnit: "english"
       })
-      this.view.ui.add(scaleBar,"bottom-left");
+      this.view.ui.add(scaleBar,"bottom-right");
 
       const expandLegend = new Expand({
         view: this.view,
@@ -95,6 +95,7 @@ class WebMap extends React.Component {
         view: this.view,
         container: this.sliderRef.current,
         values: [
+          date_yesterday,
           date_today
         ],
         loop: true,
