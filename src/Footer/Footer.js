@@ -3,16 +3,16 @@ import './Footer.css';
 
 const Footer = (props) => {
     return (
-    <div className="main-footer">
+    <div className="fixed-bottom">
         <div className="bottom-container">
             <div className="row">
             {/* column1 */}
                 <div className="col">
-                    <a href="https://www.esri.com/home">ESRI - THE SCIENCE OF WHERE</a>
+                    <a href="https://www.esri.com/home">Esri Homepage</a>
                 </div>
             {/* column2 */}
                 <div className="col">
-                    <a href="https://github.com/saraewilcox">Sara Wilcox github</a>
+                    <a href="https://github.com/saraewilcox/react-arcgis-traffic">This web map's code on github</a>
                 </div>
             {/* column3 */}
                 {/* <div className="col">
