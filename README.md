@@ -1,3 +1,9 @@
+1. install VS Code on your machine
+2. open a terminal window and type: git clone [repository url]
+
+//Step 2:
+cd [local repository]
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
