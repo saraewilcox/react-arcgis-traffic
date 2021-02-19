@@ -37,7 +37,7 @@ class NavBar extends Component {
               Javascript API for ArcGIS with React
             </DropdownItem>
           </DropdownMenu>
-          <p className="navbar-text">This application uses the World Traffic Service API from Esri. The traffic data is updated every five minutes.</p>
+          <p className="navbar-text">This application uses the World Traffic Service API from Esri. <br/>The data is updated every five minutes.</p>
         </UncontrolledDropdown>
       </Collapse>
     </Navbar>;

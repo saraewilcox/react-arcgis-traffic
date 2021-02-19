@@ -8,8 +8,8 @@
 
 .navbar-text{
   color: #fff;
-  font-size: 1rem;
-  margin-left: 20px;
+  padding-left: 100px;
+  margin-top: 5px;
 }
 
 .navbar-logo {
@@ -17,7 +17,6 @@
   font-size: 2rem;
 }
 .dropdown-toggle {
-  text-align: center;
-  margin-top: 5px;
-  margin-left: 10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
 }
