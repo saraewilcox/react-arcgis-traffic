@@ -18,7 +18,7 @@ class NavBar extends Component {
   render() {
     return <Navbar className="reactstrap-nav" dark expand='md'>
       <NavbarBrand>
-      <h3 className="navbar-logo"> <i class="fas fa-car"></i> <a href={'/'} style={{textDecoration:"none", color:"white"}}>Wichita Traffic App</a> </h3>
+      <h3 className="navbar-logo"> <i class="fas fa-car"></i> <a href={'/'} style={{textDecoration:"none", color:"white"}}>Washington D.C. Traffic App</a> </h3>
       </NavbarBrand>
       <NavbarToggler className="navbar-nav mx-auto align-items-center" onClick={this.toggle}/>
       <Collapse isOpen={this.state.isOpen} navbar>

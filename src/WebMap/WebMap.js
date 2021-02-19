@@ -15,8 +15,8 @@ class WebMap extends React.Component {
     ]) => {
 
       const trafficLayer = new MapImageLayer({
-        //url: "https://utility.arcgis.com/usrsvcs/appservices/XpzFIG0fm0IcDmE2/rest/services/World/Traffic/MapServer",
-        url: "http://traffic.arcgis.com/arcgis/rest/services/World/Traffic/MapServer",
+        url: "https://utility.arcgis.com/usrsvcs/appservices/XpzFIG0fm0IcDmE2/rest/services/World/Traffic/MapServer",
+        //url: "http://traffic.arcgis.com/arcgis/rest/services/World/Traffic/MapServer",
         dpi: 48,
         imageFormat: "png32",
         refreshInterval: 5, 
@@ -57,7 +57,7 @@ class WebMap extends React.Component {
       this.view = new MapView({
         container: this.mapRef.current,
         map: map,
-        center: [-97.3301, 37.6872], //Wichita coordinates
+        center: [-77.0369, 38.9072], //DC coordinates 
         zoom: 10
       });
 
