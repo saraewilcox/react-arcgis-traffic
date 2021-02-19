@@ -8,8 +8,9 @@
 
 .navbar-text{
   color: #fff;
-  padding-left: 100px;
-
+  padding-left: 200px;
+  margin-top: 5px;
+  text-align: right;
 }
 
 .navbar-logo {
