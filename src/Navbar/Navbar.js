@@ -33,7 +33,7 @@ class NavBar extends Component {
             <DropdownItem href="https://developers.arcgis.com/javascript/">
               Javascript API for ArcGIS
             </DropdownItem>
-            <DropdownItem href="http://140.207.158.228/latest/guide/react/">
+            <DropdownItem href="https://developers.arcgis.com/javascript/latest/sample-code/widgets-frameworks-react/">
               Javascript API for ArcGIS with React
             </DropdownItem>
           </DropdownMenu>
