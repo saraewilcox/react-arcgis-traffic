@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .bottom-container {
@@ -15,6 +14,7 @@
     width: 100%;
     height: 3rem;
     padding-top: 10px;
+    padding-left: 20px;
 }
 
 .row {
@@ -27,3 +27,14 @@
     margin-right: 5px;
     margin-left: 15px;
 }
+
+a:link, a:visited {
+    color: rgb(133, 133, 133);
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a:hover, a:active {
+    text-decoration: underline;
+  }
+  

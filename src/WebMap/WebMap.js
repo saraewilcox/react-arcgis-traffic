@@ -15,8 +15,8 @@ class WebMap extends React.Component {
     ]) => {
 
       const trafficLayer = new MapImageLayer({
-        url: "https://utility.arcgis.com/usrsvcs/appservices/XpzFIG0fm0IcDmE2/rest/services/World/Traffic/MapServer",
-        //url: "http://traffic.arcgis.com/arcgis/rest/services/World/Traffic/MapServer",
+        url: "https://utility.arcgis.com/usrsvcs/appservices/XpzFIG0fm0IcDmE2/rest/services/World/Traffic/MapServer",//this uses the rest service I created using my esri account
+        //url: "http://traffic.arcgis.com/arcgis/rest/services/World/Traffic/MapServer", //this requires user to sign in using their Esri account
         dpi: 48,
         imageFormat: "png32",
         refreshInterval: 5, 
