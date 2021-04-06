@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarText} from 'reactstrap';
 import './Navbar.css';
 
 class NavBar extends Component {
@@ -20,10 +20,11 @@ class NavBar extends Component {
       <NavbarBrand>
       <h3 className="navbar-logo"> <i class="fas fa-car"></i> <a href={'/'} style={{textDecoration:"none", color:"white"}}>Washington, D.C. Traffic App</a> </h3>
       </NavbarBrand>
+
       <NavbarToggler className="navbar-nav mx-auto align-items-center" onClick={this.toggle}/>
       <Collapse isOpen={this.state.isOpen} navbar>
         <UncontrolledDropdown>
-          <DropdownToggle className="dropdown-toggle"caret outline color="primary">
+          <DropdownToggle className="dropdown-toggle" caret outline color="primary">
              Documentation
           </DropdownToggle>
           <DropdownMenu right>
@@ -37,9 +38,13 @@ class NavBar extends Component {
               Javascript API for ArcGIS with React
             </DropdownItem>
           </DropdownMenu>
-          <p className="navbar-text">This application uses the World Traffic Service API from Esri. <br/>The data is updated every five minutes.</p>
         </UncontrolledDropdown>
       </Collapse>
+
+      <NavbarText>
+        This application uses the World Traffic Service API from Esri. <br/>The data is updated every five minutes.
+      </NavbarText>
+
     </Navbar>;
   }
 }
